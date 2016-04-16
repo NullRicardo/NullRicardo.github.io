@@ -169,6 +169,156 @@
 
   
     <ul id="menu" class="menu">
+    <li> <a title="把这个链接拖到你的Chrome收藏夹工具栏中" href='javascript:(function() {
+  function c() {
+    var e = document.createElement("link");
+    e.setAttribute("type", "text/css");
+    e.setAttribute("rel", "stylesheet");
+    e.setAttribute("href", f);
+    e.setAttribute("class", l);
+    document.body.appendChild(e)
+  }
+ 
+  function h() {
+    var e = document.getElementsByClassName(l);
+    for (var t = 0; t < e.length; t++) {
+      document.body.removeChild(e[t])
+    }
+  }
+ 
+  function p() {
+    var e = document.createElement("div");
+    e.setAttribute("class", a);
+    document.body.appendChild(e);
+    setTimeout(function() {
+      document.body.removeChild(e)
+    }, 100)
+  }
+ 
+  function d(e) {
+    return {
+      height : e.offsetHeight,
+      width : e.offsetWidth
+    }
+  }
+ 
+  function v(i) {
+    var s = d(i);
+    return s.height > e && s.height < n && s.width > t && s.width < r
+  }
+ 
+  function m(e) {
+    var t = e;
+    var n = 0;
+    while (!!t) {
+      n += t.offsetTop;
+      t = t.offsetParent
+    }
+    return n
+  }
+ 
+  function g() {
+    var e = document.documentElement;
+    if (!!window.innerWidth) {
+      return window.innerHeight
+    } else if (e && !isNaN(e.clientHeight)) {
+      return e.clientHeight
+    }
+    return 0
+  }
+ 
+  function y() {
+    if (window.pageYOffset) {
+      return window.pageYOffset
+    }
+    return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+  }
+ 
+  function E(e) {
+    var t = m(e);
+    return t >= w && t <= b + w
+  }
+ 
+  function S() {
+    var e = document.createElement("audio");
+    e.setAttribute("class", l);
+    e.src = i;
+    e.loop = false;
+    e.addEventListener("canplay", function() {
+      setTimeout(function() {
+        x(k)
+      }, 500);
+      setTimeout(function() {
+        N();
+        p();
+        for (var e = 0; e < O.length; e++) {
+          T(O[e])
+        }
+      }, 15500)
+    }, true);
+    e.addEventListener("ended", function() {
+      N();
+      h()
+    }, true);
+    e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+    document.body.appendChild(e);
+    e.play()
+  }
+ 
+  function x(e) {
+    e.className += " " + s + " " + o
+  }
+ 
+  function T(e) {
+    e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+  }
+ 
+  function N() {
+    var e = document.getElementsByClassName(s);
+    var t = new RegExp("\\b" + s + "\\b");
+    for (var n = 0; n < e.length; ) {
+      e[n].className = e[n].className.replace(t, "")
+    }
+  }
+ 
+  var e = 30;
+  var t = 30;
+  var n = 350;
+  var r = 350;
+  var i = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
+  var s = "mw-harlem_shake_me";
+  var o = "im_first";
+  var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+  var a = "mw-strobe_light";
+  var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+  var l = "mw_added_css";
+  var b = g();
+  var w = y();
+  var C = document.getElementsByTagName("*");
+  var k = null;
+  for (var L = 0; L < C.length; L++) {
+    var A = C[L];
+    if (v(A)) {
+      if (E(A)) {
+        k = A;
+        break
+      }
+    }
+  }
+  if (A === null) {
+    console.warn("Could not find a node of the right size. Please try a different page.");
+    return
+  }
+  c();
+  S();
+  var O = [];
+  for (var L = 0; L < C.length; L++) {
+    var A = C[L];
+    if (v(A)) {
+      O.push(A)
+    }
+  }
+})()    '>High</a> </li>
       
         
         <li class="menu-item menu-item-home">
@@ -310,7 +460,7 @@
               
                 
                 <a class="post-title-link" href="/2016/04/17/hello-world/" itemprop="url">
-                  窗外雨，屋间清
+                  夜无眠
                 </a>
               
             
@@ -328,6 +478,25 @@
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/myblog/" itemprop="url" rel="index">
+                    <span itemprop="name">myblog</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -359,115 +528,42 @@
       
         
           
-            <p>Blog to build success, welcome to visit, will share more experience<br>ブログに張られて成功させて、みんなを歓迎しての訪問と関連しては、これから分かち合うことよりも多くの体験だ<br>블 로그 초가집 성공 에 오 신 것 을 환영합니다 모두들 방문, 앞으로 더 나 눔 의 피부 에 와 닿 는 다</p>
-
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/16/text/" itemprop="url">
-                  Frist
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-16T20:50:47+08:00" content="2016-04-16">
-              2016-04-16
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/16/text/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/16/text/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="欢迎"><a href="#欢迎" class="headerlink" title="欢迎"></a>欢迎</h1><p>[个人|技术|Markdown]</p>
-<p><strong>Ricardo’sBlog</strong><br>这里是图片测试功能，当然要美女啦<br> <img src="http://d2.freep.cn/3tb_1604162003027nkq562926.jpg" alt="enter image description here"></p>
-<hr>
-<h2 id="Markdown简介"><a href="#Markdown简介" class="headerlink" title="Markdown简介"></a>Markdown简介</h2><blockquote>
-<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— <a href="https://zh.wikipedia.org/wiki/Markdown" target="_blank" rel="external">维基百科</a></p>
+            <h1 id="夜无眠"><a href="#夜无眠" class="headerlink" title="夜无眠"></a>夜无眠</h1><blockquote>
+<p>花开花落，不过一段距离，悲欢离合，也只是时光里的流沙，握住的，便珍惜；散落的，便不再去沾惹。</p>
 </blockquote>
-<h3 id="装逼的代码块"><a href="#装逼的代码块" class="headerlink" title="装逼的代码块"></a>装逼的代码块</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@requires_authorization</span><br><span class="line">def somefunc(param1=&apos;&apos;, param2=0):</span><br><span class="line">    &apos;&apos;&apos;A docstring&apos;&apos;&apos;</span><br><span class="line">    if param1 &gt; param2: # interesting</span><br><span class="line">        print &apos;Greater&apos;</span><br><span class="line">    return (param2 - param1 + 1) or None</span><br><span class="line">class SomeClass:</span><br><span class="line">    pass</span><br><span class="line">&gt;&gt;&gt; message = &apos;&apos;&apos;interpreter</span><br><span class="line">... prompt&apos;&apos;&apos;</span><br></pre></td></tr></table></figure>
+<h2 id="Inspiration"><a href="#Inspiration" class="headerlink" title="Inspiration"></a><strong>Inspiration</strong></h2><blockquote>
+<p>The respectability of youth lies in their courage and great expectations.</p>
+</blockquote>
+<p>这是搭建博客成功以来真正意义上第一个博文，虽然用了几分钟就把Markdown语法看懂了，倒是MarkdownPad的安装出现了一些小小的问题但是通过官网的组件已经修补，然后才有了下文，才出现了这篇不成熟的博文By Ricardo。<br><img src="http://d2.freep.cn/3tb_1604162003027nkq562926.jpg" alt=""></p>
+<h2 id="Mood"><a href="#Mood" class="headerlink" title="Mood"></a><strong>Mood</strong></h2><blockquote>
+<p>All of our misery derives,in essence,from our fury against our own incapability.</p>
+</blockquote>
+<p>对于即将发生的和已经发生的事我们测不到也无能为力，从开始到现在，每天把自己弄得特别疲惫，来代替思念她的狼狈，当以前的习惯变了，以前的场景再也没有了两个人，再也没有为了一个人的喜怒哀乐而喜怒哀乐的时候，当自己疲惫了，挫折了，也不敢停下，现在的努力只为了自己过的更好，也许真正为的是自己最后说的那句他并不在意的“我等你”。<br><img src="http://d3.freep.cn/3tb_160417031029u537562926.jpg" alt=""></p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a><strong>Code</strong></h2><blockquote>
+<p>Computers are useless. They can only give you answers.</p>
+</blockquote>
+<p>这可是技术微博啊，阿西吧！所以不支持代码高亮怎么行呢？？！！</p>
+<pre><code>static void do_work(int *val) {
+*val += 100;
+*val *= 0.371;
+}
+
+int  task_run(struct sttask_t *ptsk) {
+size_t i, j, sed = 20;
+
+for (i=0; i&lt;sed; i++)
+for (j=0; j&lt;sed; j++)
+do_work((int *)ptsk-&gt;task_arg);
+
+/* Do not call @printf in the test since it will waste our 
+ * so much time on competing the IO.
+ */
+return 0;
+}
+</code></pre><hr>
+<h2 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h2><p>这几个月走来，谢谢身边的人，特别感谢以后会变成<strong>大长腿165女神</strong>的正在看这条博客的你</p>
 <hr>
-<p>好累啊，一天为了他没吃饭了，妈的Mark</p>
+<p>夜深人静，晚安世界<br>2016-04-17 03:29:26 </p>
 
           
         
@@ -537,17 +633,24 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
